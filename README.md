@@ -11,8 +11,9 @@ sobre o banco de dados:
   - disciplina
   - aluno
   - professor
-
-  */ IMAGEM MODELO CONCEITUAL /*
+  
+</br>
+<img alt="modelo conceitual" width="100%" src="https://github.com/marcelo-souto/modelagem-dados-mysql/blob/main/modelo_conceitual.jpg?raw=true" />
 
 - Quais são os principais campos e tipos?
   os principais campos que distinguem as entidades são as chaves primárias representadas pelas colunas com o prefixo cod:
@@ -24,10 +25,11 @@ sobre o banco de dados:
 
   estas chaves são códigos únicos utilizadas também para um possível referenciamento em outra tabela, assumindo o papel de chave estrangeira. No modelo lógico é possível ver as tabelas, suas respectivas chaves e o tipo de dado a ser recebido.
 
-  */ IMAGEM MODELO LÓGICO /*
+</br>
+<img alt="modelo conceitual" width="100%" src="https://github.com/marcelo-souto/modelagem-dados-mysql/blob/main/modelo_logico.jpg?raw=true" />
 
-- Como essas entidades estão relacionadas?
-  *curso* tem *turma*,
-  *turma* possui *disciplina*,
-  *disciplina* possui *professor* que comanda a *turma*,
+- Como essas entidades estão relacionadas?        
+  *curso* tem *turma*,              
+  *turma* possui *disciplina*,            
+  *disciplina* possui *professor* que comanda a *turma*,                  
   *aluno* pertence a *turma*.
