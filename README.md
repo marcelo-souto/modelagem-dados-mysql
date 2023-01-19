@@ -1,10 +1,10 @@
 # Modelagem e banco de dados em MySQL
 
 Trabalho acadêmico cujo a proposta é desenvolver um banco de dados para uma escola.
-Durante o projeto foi desenvolvido um modelo conceitual, lógico e o próprio banco no MySQL utilizando o MySQL Workbench
+Durante o projeto foi desenvolvido um modelo conceitual, lógico e o próprio banco no MySQL utilizando o <a href="https://dev.mysql.com/doc/">MySQL Workbench</a>.
 
 sobre o banco de dados:
-- Existem outras entidades além dessas três (curso, turma, aluno)?
+- Existem outras entidades além dessas três (curso, turma, aluno)?               
   As entidades do modelo proposto são: 
   - curso
   - turma
@@ -15,7 +15,7 @@ sobre o banco de dados:
 </br>
 <img alt="modelo conceitual" width="100%" src="https://github.com/marcelo-souto/modelagem-dados-mysql/blob/main/modelo_conceitual.jpg?raw=true" />
 
-- Quais são os principais campos e tipos?
+- Quais são os principais campos e tipos?                     
   os principais campos que distinguem as entidades são as chaves primárias representadas pelas colunas com o prefixo cod:
   - cod_curso 
   - cod_turma
