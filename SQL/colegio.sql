@@ -36,7 +36,7 @@ CREATE TABLE `aluno` (
   PRIMARY KEY (`cod_aluno`),
   KEY `cod_turma` (`cod_turma`),
   CONSTRAINT `aluno_ibfk_1` FOREIGN KEY (`cod_turma`) REFERENCES `turma` (`cod_turma`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,7 +45,7 @@ CREATE TABLE `aluno` (
 
 LOCK TABLES `aluno` WRITE;
 /*!40000 ALTER TABLE `aluno` DISABLE KEYS */;
-INSERT INTO `aluno` VALUES (1,1454,'Marcelo Souto','1997-09-06','17894991783','Rua Doze Casa 22','masculino',1);
+INSERT INTO `aluno` VALUES (1,1454,'Marcelo Souto','1997-09-06','17895454453','Rua Noventa Casa 35','masculino',1),(2,1455,'Clarice de Souza','1997-05-16','45689712533','Rua Sete Casa 15','feminino',1),(3,1456,'Juliana da Silva','1997-01-25','45689533136','Rua Quinze Casa 10','feminino',1),(4,1457,'Mateus Costa','1997-05-03','45688912533','Rua Quarenta Casa 34','masculino',1),(5,1458,'Enzo Miguel Neto','1997-11-06','85689712533','Rua Oitenta Casa 22','masculino',1);
 /*!40000 ALTER TABLE `aluno` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -141,16 +141,13 @@ CREATE TABLE `turma` (
   `cod_turma` int NOT NULL AUTO_INCREMENT,
   `cod_curso` int NOT NULL,
   `cod_disciplina` int NOT NULL,
-  `cod_professor` int NOT NULL,
   `data_inicio` date DEFAULT NULL,
   `data_encerramento` date DEFAULT NULL,
   PRIMARY KEY (`cod_turma`),
   KEY `cod_curso` (`cod_curso`),
   KEY `cod_disciplina` (`cod_disciplina`),
-  KEY `cod_professor` (`cod_professor`),
   CONSTRAINT `turma_ibfk_1` FOREIGN KEY (`cod_curso`) REFERENCES `curso` (`cod_curso`),
-  CONSTRAINT `turma_ibfk_2` FOREIGN KEY (`cod_disciplina`) REFERENCES `disciplina` (`cod_disciplina`),
-  CONSTRAINT `turma_ibfk_3` FOREIGN KEY (`cod_professor`) REFERENCES `professor` (`cod_professor`)
+  CONSTRAINT `turma_ibfk_2` FOREIGN KEY (`cod_disciplina`) REFERENCES `disciplina` (`cod_disciplina`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -160,7 +157,7 @@ CREATE TABLE `turma` (
 
 LOCK TABLES `turma` WRITE;
 /*!40000 ALTER TABLE `turma` DISABLE KEYS */;
-INSERT INTO `turma` VALUES (1,2,1,2,'2022-01-15','2023-06-11');
+INSERT INTO `turma` VALUES (1,2,1,'2022-01-15','2023-06-11');
 /*!40000 ALTER TABLE `turma` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -173,4 +170,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-01-18 22:46:07
+-- Dump completed on 2023-01-19 14:36:51
